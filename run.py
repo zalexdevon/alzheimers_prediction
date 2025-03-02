@@ -32,7 +32,7 @@ file_path = "artifacts/.gitignore"
 if os.path.exists(file_path):
     os.remove(file_path)
 
-# Chạy xong push lên git ngay
+# Chạy xong trên colab push lên git ngay
 os.system("git add .")
 os.system('git commit -m "c"')
 os.system("git push")

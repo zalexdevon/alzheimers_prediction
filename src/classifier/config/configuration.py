@@ -1,5 +1,5 @@
 from classifier.constants import *
-from classifier.utils.common import read_yaml, create_directories
+from classifier.Mylib.myfuncs import read_yaml, create_directories
 from classifier.entity.config_entity import (
     DataTransformationConfig,
     ModelTrainerConfig,
@@ -7,7 +7,7 @@ from classifier.entity.config_entity import (
     MonitorPlotterConfig,
 )
 from pathlib import Path
-from classifier.utils import common
+from classifier.Mylib import myfuncs
 
 
 class ConfigurationManager:
@@ -15,7 +15,6 @@ class ConfigurationManager:
         self,
         config_filepath=CONFIG_FILE_PATH,
         params_filepath=PARAMS_FILE_PATH,
-        schema_filepath=SCHEMA_FILE_PATH,
     ):
 
         self.config = read_yaml(Path(config_filepath))
@@ -50,7 +49,7 @@ class ConfigurationManager:
 
         create_directories([config.root_dir, config.monitor_desc_folder_path])
 
-        param_grid_model = common.get_param_grid_model(
+        param_grid_model = myfuncs.get_param_grid_model(
             self.params.param_grid_model_desc
         )
 

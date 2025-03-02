@@ -6,8 +6,6 @@ from classifier.Mylib import myfuncs
 from sklearn import metrics
 import plotly.express as px
 
-TARGET_COL = "price_range"
-
 
 class MonitorPlotter:
     def __init__(self, config: MonitorPlotterConfig):

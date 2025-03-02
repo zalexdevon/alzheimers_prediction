@@ -21,7 +21,6 @@ from lightgbm import LGBMClassifier
 from sklearn.model_selection import ParameterSampler
 from sklearn import metrics
 from sklearn.base import clone
-from classifier.utils import common
 import time
 
 
@@ -124,7 +123,7 @@ class ModelTrainer:
         )
         self.target = pd.concat([self.train_target_data, self.val_target_data], axis=0)
 
-        self.base_model = common.get_base_model(self.config.model_name)
+        self.base_model = myfuncs.get_base_model(self.config.model_name)
 
         self.trainval_splitter = PredefinedSplit(
             test_fold=[-1] * len(self.train_feature_data)
@@ -132,7 +131,7 @@ class ModelTrainer:
         )
 
         result = f"P: {self.config.data_transformation}<br>{self.config.model_name}<br>"
-        result += common.get_monitor_desc(self.config.param_grid_model_desc)
+        result += myfuncs.get_monitor_desc(self.config.param_grid_model_desc)
         self.monitor_desc = result
 
     def save_list_monitor_components(self):
@@ -156,7 +155,7 @@ class ModelTrainer:
         )
 
     def plot_monitor(self):
-        common.plot_monitor(self.list_monitor_components)
+        myfuncs.plot_monitor(self.list_monitor_components)
 
     def get_detail_of_training_and_save_data(self, param_list):
         best_model = None

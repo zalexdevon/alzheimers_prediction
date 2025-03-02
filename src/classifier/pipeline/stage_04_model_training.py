@@ -3,8 +3,6 @@ from classifier.components.model_trainer import (
     ModelTrainer,
 )
 from classifier import logger
-from classifier.utils import common
-from classifier.Mylib import myfuncs
 from classifier.components.monitor_plotter import (
     MonitorPlotter,
 )

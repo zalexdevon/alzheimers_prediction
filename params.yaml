@@ -3,13 +3,13 @@ target_col: do_get_Alzheimer
 metric: accuracy
 
 # DATA TRANSFORMATION
-data_transformation: "100" # id của data_transformation
+data_transformation: "200" # id của data_transformation
 
 # MODEL TRAINING
-model_name: XGB_1
+model_name: XGB_2
 param_grid_model_desc:
-      n_estimators: 1000-1200-50
-      max_depth: 50-80-2
+      n_estimators: 100-200-10
+      max_depth: 10-15-1
       learning_rate: 0.01-0.03
       reg_alpha: 0.01-0.03
       reg_lambda: 0.01-0.03

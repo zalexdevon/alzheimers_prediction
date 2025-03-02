@@ -19,7 +19,6 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import FunctionTransformer
 from sklearn.neighbors import KNeighborsTransformer, NearestNeighbors
 from imblearn.over_sampling import SMOTE
-from classifier.utils import common
 
 
 # FEATURE
@@ -153,7 +152,7 @@ class DuringFeatureColumnTransformer(BaseEstimator, TransformerMixin):
 
     def transform(self, X, y=None):
         X = self.column_transformer.transform(X)
-        self.cols = common.get_real_column_name_from_get_feature_names_out(
+        self.cols = myfuncs.get_real_column_name_from_get_feature_names_out(
             self.column_transformer.get_feature_names_out()
         )
 
@@ -204,7 +203,7 @@ class NamedColumnTransformer(BaseEstimator, TransformerMixin):
 
         return pd.DataFrame(
             X,
-            columns=common.get_real_column_name_from_get_feature_names_out(
+            columns=myfuncs.get_real_column_name_from_get_feature_names_out(
                 self.column_transformer.get_feature_names_out()
             ),
         )
