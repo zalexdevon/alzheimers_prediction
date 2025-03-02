@@ -17,11 +17,11 @@ stages:
       size: 1111
     params:
       params.yaml:
-        data_transformation: '90'
+        data_transformation: '100'
     outs:
-    - path: artifacts/data_transformation_90
+    - path: artifacts/data_transformation_100
       hash: md5
-      md5: 35020ace7a205847dee04f00822901e5.dir
+      md5: 91ddefe9313b1df6a680275e3c8a1344.dir
       size: 21938077
       nfiles: 6
   model_trainer_randomised_train_val:
@@ -60,9 +60,9 @@ stages:
   model_trainer:
     cmd: python src/classifier/pipeline/stage_04_model_training.py
     deps:
-    - path: artifacts/data_transformation_90
+    - path: artifacts/data_transformation_100
       hash: md5
-      md5: 35020ace7a205847dee04f00822901e5.dir
+      md5: 91ddefe9313b1df6a680275e3c8a1344.dir
       size: 21938077
       nfiles: 6
     - path: src/classifier/pipeline/stage_04_model_training.py
@@ -73,5 +73,5 @@ stages:
       params.yaml:
         N_ITER: 5
         metric: accuracy
-        model_name: LR_2
+        model_name: LR_3
         model_trainer_type: r
