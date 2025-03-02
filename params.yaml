@@ -8,7 +8,7 @@ data_transformation: "80" # id của data_transformation
 # MODEL TRAINING
 model_name: LR
 param_grid_model_desc:
-      C: 0.1-2-0.1
+      C: 2-10-2
 model_trainer_type: r # rcv: randomisedcv, gcv: gridcv, r: randomisedTrainVal, g: gridTrainVal
 N_ITER: 5 # số tổ hợp chọn khi chạy random search
 
@@ -18,7 +18,7 @@ evaluated_model_name: XGB_1
 
 # MONITOR PLOT
 monitor_plotter:
-      target_val_value: 50
-      max_val_value: 1000
-      height_for_annot: 200
-      dtick_y_value: 50
+      target_val_value: 70
+      max_val_value: 100
+      height_for_annot: 20
+      dtick_y_value: 5

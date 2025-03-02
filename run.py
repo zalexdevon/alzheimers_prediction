@@ -26,3 +26,10 @@ sub_param_for_yaml_file("dvc_p.yaml", "dvc.yaml", replace_dict)
 
 stage_name = sys.argv[1]
 os.system(f"dvc repro {stage_name}")
+
+# Xóa file .ignore nếu có 
+file_path = "artifacts/.gitignore"
+if os.path.exists(file_path):
+    os.remove(file_path)
+
+
