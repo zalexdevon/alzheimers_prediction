@@ -25,7 +25,7 @@ stage_name = sys.argv[1]
 os.system(f"dvc repro {stage_name}")
 
 # Xóa file .ignore nếu có 
-file_path = "artifacts/.gitignore"
+file_path = "artifacts/data_transformation/.gitignore"
 if os.path.exists(file_path):
     os.remove(file_path)
 
