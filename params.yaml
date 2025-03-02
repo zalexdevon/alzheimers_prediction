@@ -6,7 +6,7 @@ metric: accuracy
 data_transformation: "400" # id của data_transformation
 
 # MODEL TRAINING
-model_name: XGB_3
+model_name: XGB_4
 param_grid_model_desc:
       n_estimators: 100-200-10
       max_depth: 10-15-1
