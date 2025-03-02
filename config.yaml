@@ -16,10 +16,10 @@ model_evaluation:
   root_dir: artifacts/model_evaluation/
   test_data_path: artifacts/data_correction/test_data.pkl
 model_trainer:
-  best_model_path: artifacts/model_trainer/LR_3/best_model.pkl
+  best_model_path: artifacts/model_trainer/XGB_1/best_model.pkl
   list_monitor_components_path: artifacts/monitor_desc/list_monitor_components.pkl
   monitor_desc_folder_path: artifacts/monitor_desc
-  root_dir: artifacts/model_trainer/LR_3
+  root_dir: artifacts/model_trainer/XGB_1
   train_feature_path: artifacts/data_transformation_100/train_features.pkl
   train_target_path: artifacts/data_transformation_100/train_target.pkl
   val_feature_path: artifacts/data_transformation_100/val_features.pkl
