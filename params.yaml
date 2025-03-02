@@ -6,7 +6,7 @@ metric: accuracy
 data_transformation: "80" # id của data_transformation
 
 # MODEL TRAINING
-model_name: LR
+model_name: LR_1
 param_grid_model_desc:
       C: 2-10-2
 model_trainer_type: r # rcv: randomisedcv, gcv: gridcv, r: randomisedTrainVal, g: gridTrainVal
