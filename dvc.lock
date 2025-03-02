@@ -73,5 +73,5 @@ stages:
       params.yaml:
         N_ITER: 5
         metric: accuracy
-        model_name: LR
+        model_name: LR_1
         model_trainer_type: r
