@@ -5,6 +5,9 @@ from classifier.components.model_trainer import (
 from classifier import logger
 from classifier.utils import common
 from classifier.Mylib import myfuncs
+from classifier.components.monitor_plotter import (
+    MonitorPlotter,
+)
 
 STAGE_NAME = "Model Trainer stage"
 
@@ -37,7 +40,10 @@ class ModelTrainerPipeline:
                 break
 
         model_trainer.save_list_monitor_components()
-        model_trainer.plot_monitor()
+
+        monitor_plot_config = config.get_monitor_plot_config()
+        monitor_plot = MonitorPlotter(config=monitor_plot_config)
+        monitor_plot.plot(model_trainer.list_monitor_components)
 
 
 if __name__ == "__main__":
