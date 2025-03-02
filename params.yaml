@@ -1,0 +1,30 @@
+# COMMON
+target_col: do_get_Alzheimer
+metric: accuracy
+
+# DATA TRANSFORMATION
+data_transformation: "49" # id của data_transformation
+
+# MODEL TRAINING
+model_name: XGB_39
+param_grid_model_desc:
+      n_estimators: 600-700
+      max_depth: 10-15
+      learning_rate: 0.01
+      reg_alpha: 0
+      reg_lambda: 0.1-0.3
+      subsample: 1
+      colsample_bytree: 1
+model_trainer_type: r # rcv: randomisedcv, gcv: gridcv, r: randomisedTrainVal, g: gridTrainVal
+N_ITER: 5 # số tổ hợp chọn khi chạy random search
+
+# MODEL EVALUATION
+evaluated_data_transformation: "10"
+evaluated_model_name: XGB_1
+
+# MONITOR PLOT
+monitor_plotter:
+      target_val_value: 50
+      max_val_value: 1000
+      height_for_annot: 200
+      dtick_y_value: 50

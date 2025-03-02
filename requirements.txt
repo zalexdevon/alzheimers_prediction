@@ -1,0 +1,22 @@
+pandas
+mlflow==2.2.2
+dvc
+notebook
+numpy
+scikit-learn==1.3.0
+matplotlib
+python-box==6.0.2
+pyYAML
+tqdm
+ensure==1.0.2
+joblib
+types-PyYAML
+Flask
+Flask-Cors
+plotly
+seaborn
+dill
+xgboost
+lightgbm 
+imbalanced-learn
+-e .
