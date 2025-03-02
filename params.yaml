@@ -6,9 +6,16 @@ metric: accuracy
 data_transformation: "100" # id của data_transformation
 
 # MODEL TRAINING
-model_name: LR_3
+model_name: XGB_1
 param_grid_model_desc:
-      C: 50-80-2
+      n_estimators: 1000-1200-50
+      max_depth: 50-80-2
+      learning_rate: 0.01-0.03
+      reg_alpha: 0.01-0.03
+      reg_lambda: 0.01-0.03
+      subsample: 0.7-0.9
+      colsample_bytrees: 0.7-0.9
+
 model_trainer_type: r # rcv: randomisedcv, gcv: gridcv, r: randomisedTrainVal, g: gridTrainVal
 N_ITER: 5 # số tổ hợp chọn khi chạy random search
 
