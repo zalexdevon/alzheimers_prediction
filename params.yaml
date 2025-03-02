@@ -3,12 +3,12 @@ target_col: do_get_Alzheimer
 metric: accuracy
 
 # DATA TRANSFORMATION
-data_transformation: "90" # id của data_transformation
+data_transformation: "100" # id của data_transformation
 
 # MODEL TRAINING
-model_name: LR_2
+model_name: LR_3
 param_grid_model_desc:
-      C: 25-40-2
+      C: 50-80-2
 model_trainer_type: r # rcv: randomisedcv, gcv: gridcv, r: randomisedTrainVal, g: gridTrainVal
 N_ITER: 5 # số tổ hợp chọn khi chạy random search
 
