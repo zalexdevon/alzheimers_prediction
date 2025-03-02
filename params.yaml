@@ -14,7 +14,7 @@ param_grid_model_desc:
       reg_alpha: 0.01-0.03
       reg_lambda: 0.01-0.03
       subsample: 0.7-0.9
-      colsample_bytrees: 0.7-0.9
+      colsample_bytree: 0.7-0.9
 
 model_trainer_type: r # rcv: randomisedcv, gcv: gridcv, r: randomisedTrainVal, g: gridTrainVal
 N_ITER: 5 # số tổ hợp chọn khi chạy random search
