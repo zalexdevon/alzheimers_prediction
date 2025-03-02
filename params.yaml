@@ -3,12 +3,12 @@ target_col: do_get_Alzheimer
 metric: accuracy
 
 # DATA TRANSFORMATION
-data_transformation: "80" # id của data_transformation
+data_transformation: "90" # id của data_transformation
 
 # MODEL TRAINING
-model_name: LR_1
+model_name: LR_2
 param_grid_model_desc:
-      C: 2-10-2
+      C: 25-40-2
 model_trainer_type: r # rcv: randomisedcv, gcv: gridcv, r: randomisedTrainVal, g: gridTrainVal
 N_ITER: 5 # số tổ hợp chọn khi chạy random search
 
@@ -18,7 +18,7 @@ evaluated_model_name: XGB_1
 
 # MONITOR PLOT
 monitor_plotter:
-      target_val_value: 70
+      target_val_value: 97
       max_val_value: 100
       height_for_annot: 20
       dtick_y_value: 5
