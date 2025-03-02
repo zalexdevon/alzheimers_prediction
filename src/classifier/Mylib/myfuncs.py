@@ -318,7 +318,7 @@ def np_arange_int(start, end, step):
 def np_arange_float(start, end, step):
     """Tạo ra dãy số thực cách nhau step"""
 
-    return np.round(start, end, step)
+    return np.arange(start, end, step)
 
 
 def np_arange(start, end, step):
