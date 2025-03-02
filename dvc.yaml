@@ -6,7 +6,7 @@ stages:
     - artifacts/data_correction/train_data.pkl
     - artifacts/data_correction/val_data.pkl
     outs:
-    - artifacts/data_transformation_200
+    - artifacts/300
     params:
     - data_transformation
   model_evaluation:
@@ -21,7 +21,7 @@ stages:
     cmd: python src/classifier/pipeline/stage_04_model_training.py
     deps:
     - src/classifier/pipeline/stage_04_model_training.py
-    - artifacts/data_transformation_200
+    - artifacts/300
     params:
     - model_name
     - model_trainer_type
