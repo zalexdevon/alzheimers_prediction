@@ -17,11 +17,11 @@ stages:
       size: 1111
     params:
       params.yaml:
-        data_transformation: '200'
+        data_transformation: '400'
     outs:
-    - path: artifacts/data_transformation_200
+    - path: artifacts/data_transformation/400
       hash: md5
-      md5: b018883d009830770eaa3f8e4a0fb90b.dir
+      md5: b864262903aabe3859789f3e9aa7af49.dir
       size: 21938077
       nfiles: 6
   model_trainer_randomised_train_val:
@@ -60,9 +60,9 @@ stages:
   model_trainer:
     cmd: python src/classifier/pipeline/stage_04_model_training.py
     deps:
-    - path: artifacts/data_transformation_200
+    - path: artifacts/data_transformation/400
       hash: md5
-      md5: b018883d009830770eaa3f8e4a0fb90b.dir
+      md5: b864262903aabe3859789f3e9aa7af49.dir
       size: 21938077
       nfiles: 6
     - path: src/classifier/pipeline/stage_04_model_training.py
@@ -73,5 +73,5 @@ stages:
       params.yaml:
         N_ITER: 5
         metric: accuracy
-        model_name: XGB_2
+        model_name: XGB_4
         model_trainer_type: r
