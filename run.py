@@ -6,11 +6,9 @@ import os
 
 params = read_yaml(Path(PARAMS_FILE_PATH))
 data_transformation = params.data_transformation
-data_transformation = f"data_transformation_{data_transformation}"
 
 model_name = params.model_name
 evaluated_data_transformation = params.evaluated_data_transformation
-evaluated_data_transformation = f"data_transformation_{evaluated_data_transformation}"
 evaluated_model_name = params.evaluated_model_name
 
 replace_dict = {

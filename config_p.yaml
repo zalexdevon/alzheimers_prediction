@@ -5,21 +5,21 @@ data_transformation:
       val_data_path: artifacts/data_correction/val_data.pkl
 
       # P
-      root_dir: artifacts/${P}
-      preprocessor_path: artifacts/${P}/preprocessor.pkl
-      classes_path: artifacts/${P}/classes.pkl
-      train_features_path: artifacts/${P}/train_features.pkl
-      train_target_path: artifacts/${P}/train_target.pkl
-      val_features_path: artifacts/${P}/val_features.pkl
-      val_target_path: artifacts/${P}/val_target.pkl
+      root_dir: artifacts/data_transformation/${P}
+      preprocessor_path: artifacts/data_transformation/${P}/preprocessor.pkl
+      classes_path: artifacts/data_transformation/${P}/classes.pkl
+      train_features_path: artifacts/data_transformation/${P}/train_features.pkl
+      train_target_path: artifacts/data_transformation/${P}/train_target.pkl
+      val_features_path: artifacts/data_transformation/${P}/val_features.pkl
+      val_target_path: artifacts/data_transformation/${P}/val_target.pkl
 
 # 4 in 1
 model_trainer:
       # P
-      train_feature_path: artifacts/${P}/train_features.pkl
-      train_target_path: artifacts/${P}/train_target.pkl
-      val_feature_path: artifacts/${P}/val_features.pkl
-      val_target_path: artifacts/${P}/val_target.pkl
+      train_feature_path: artifacts/data_transformation/${P}/train_features.pkl
+      train_target_path: artifacts/data_transformation/${P}/train_target.pkl
+      val_feature_path: artifacts/data_transformation/${P}/val_features.pkl
+      val_target_path: artifacts/data_transformation/${P}/val_target.pkl
 
       # T Lưu các model và kết quả
       root_dir: artifacts/model_trainer/${T}
@@ -31,7 +31,7 @@ model_trainer:
 model_evaluation:
       test_data_path: artifacts/data_correction/test_data.pkl
 
-      preprocessor_path: artifacts/${PE}/preprocessor.pkl
+      preprocessor_path: artifacts/data_transformation/${PE}/preprocessor.pkl
 
       model_path: artifacts/model_trainer/${E}/best_model.pkl
       root_dir: artifacts/model_evaluation/
