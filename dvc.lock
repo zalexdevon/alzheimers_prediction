@@ -17,12 +17,12 @@ stages:
       size: 1111
     params:
       params.yaml:
-        data_transformation: '76'
+        data_transformation: '80'
     outs:
-    - path: artifacts/data_transformation_76
+    - path: artifacts/data_transformation_80
       hash: md5
-      md5: 0620b2db6594b4b3cf17e73cd2a57c7e.dir
-      size: 22473014
+      md5: 1379185e17e3c9236d8109b68e0fae0f.dir
+      size: 21938077
       nfiles: 6
   model_trainer_randomised_train_val:
     cmd: python src/classifier/pipeline/stage_04_model_training_randomised_train_val.py
@@ -60,17 +60,18 @@ stages:
   model_trainer:
     cmd: python src/classifier/pipeline/stage_04_model_training.py
     deps:
-    - path: artifacts/data_transformation_10
+    - path: artifacts/data_transformation_80
       hash: md5
-      md5: cd5384e723ca7b04aa16818dd3fc4432.dir
-      size: 19796994
+      md5: 1379185e17e3c9236d8109b68e0fae0f.dir
+      size: 21938077
       nfiles: 6
     - path: src/classifier/pipeline/stage_04_model_training.py
       hash: md5
-      md5: 0dc9f0563d3182e31df502ca055fb916
-      size: 1607
+      md5: 1dcf7daf3a594255a3451b7756b6caa7
+      size: 1788
     params:
       params.yaml:
         N_ITER: 5
-        model_name: XGB_37
+        metric: accuracy
+        model_name: LR
         model_trainer_type: r
