@@ -1,1 +1,1 @@
-print("Hello world hehe")
+print("Connect to new github repo")
