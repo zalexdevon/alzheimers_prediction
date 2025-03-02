@@ -1,14 +1,14 @@
 artifacts_root: artifacts
 data_transformation:
-  classes_path: artifacts/data_transformation/400/classes.pkl
-  preprocessor_path: artifacts/data_transformation/400/preprocessor.pkl
-  root_dir: artifacts/data_transformation/400
+  classes_path: artifacts/data_transformation/500/classes.pkl
+  preprocessor_path: artifacts/data_transformation/500/preprocessor.pkl
+  root_dir: artifacts/data_transformation/500
   train_data_path: artifacts/data_correction/train_data.pkl
-  train_features_path: artifacts/data_transformation/400/train_features.pkl
-  train_target_path: artifacts/data_transformation/400/train_target.pkl
+  train_features_path: artifacts/data_transformation/500/train_features.pkl
+  train_target_path: artifacts/data_transformation/500/train_target.pkl
   val_data_path: artifacts/data_correction/val_data.pkl
-  val_features_path: artifacts/data_transformation/400/val_features.pkl
-  val_target_path: artifacts/data_transformation/400/val_target.pkl
+  val_features_path: artifacts/data_transformation/500/val_features.pkl
+  val_target_path: artifacts/data_transformation/500/val_target.pkl
 model_evaluation:
   model_path: artifacts/model_trainer/XGB_1/best_model.pkl
   preprocessor_path: artifacts/data_transformation/10/preprocessor.pkl
@@ -16,11 +16,11 @@ model_evaluation:
   root_dir: artifacts/model_evaluation/
   test_data_path: artifacts/data_correction/test_data.pkl
 model_trainer:
-  best_model_path: artifacts/model_trainer/XGB_4/best_model.pkl
+  best_model_path: artifacts/model_trainer/XGB_5/best_model.pkl
   list_monitor_components_path: artifacts/monitor_desc/list_monitor_components.pkl
   monitor_desc_folder_path: artifacts/monitor_desc
-  root_dir: artifacts/model_trainer/XGB_4
-  train_feature_path: artifacts/data_transformation/400/train_features.pkl
-  train_target_path: artifacts/data_transformation/400/train_target.pkl
-  val_feature_path: artifacts/data_transformation/400/val_features.pkl
-  val_target_path: artifacts/data_transformation/400/val_target.pkl
+  root_dir: artifacts/model_trainer/XGB_5
+  train_feature_path: artifacts/data_transformation/500/train_features.pkl
+  train_target_path: artifacts/data_transformation/500/train_target.pkl
+  val_feature_path: artifacts/data_transformation/500/val_features.pkl
+  val_target_path: artifacts/data_transformation/500/val_target.pkl
