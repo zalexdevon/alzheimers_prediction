@@ -172,3 +172,5 @@ cython_debug/
 .pypirc
 
 # Other 
+Data/
+artifacts/
